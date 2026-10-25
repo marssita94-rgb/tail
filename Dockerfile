@@ -1,4 +1,4 @@
-FROM your-app:latest
+FROM debian:latest
 
 RUN curl -fsSL https://tailscale.com/install.sh | sh
 
