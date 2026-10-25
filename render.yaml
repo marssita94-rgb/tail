@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: app
+    port: 8080
+    env: docker
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: TAILSCALE_AUTH_KEY
+        value: tskey-auth-xxxxxxxxxxxx
+      - key: TAILSCALE_HOSTNAME
+        value: myapp-tailscale
+      - key: TAILSCALE_EXTRA_ARGS
+        value: "--advertise-tags=tag:web"
